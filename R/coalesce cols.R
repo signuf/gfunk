@@ -20,7 +20,7 @@ coalesce_char <- function(...) {
 #' @return A date vector
 #' @export
 coalesce_date <- function(...) {
-  coalesce_as_char(...) %>% as.Date()
+  coalesce_char(...) %>% as.Date()
 }
 
 #' Combine levels
@@ -44,5 +44,5 @@ combine_levels <- function(...) {
 #' @return A factor vector
 #' @export
 coalesce_factor <- function(...) {
-  factor(coalesce_as_char(...), levels = combine_levels(...))
+  factor(coalesce_char(...), levels = combine_levels(...))
 }
