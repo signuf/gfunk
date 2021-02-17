@@ -27,3 +27,6 @@ NA_class <- function(x) {
 #' @return true or NA of same class as true
 #' @export
 if_else_NA <- function(condition, true) if_else(condition, true, NA_class(true))
+
+#' @export
+'%!in%' <- function(x,y) !('%in%'(x,y))
