@@ -13,7 +13,7 @@
 #' @export
 join_dictionary <- function(.data, dict, by = NULL, suffix = '.dict') {
   stopifnot(is.character(by), length(by) == 1,
-            is.tibble(dict) | is.data.frame(dict), length(dict) == 2,
+            is_tibble(dict) | is.data.frame(dict), length(dict) == 2,
             is.character(suffix))
 
   new_name <- paste0(names(by)[1], suffix)
