@@ -5,7 +5,7 @@
 #' @export
 NA_class <- function(x) {
   # Returns NA value of same class as x
-  switch(class(x),
+  switch(class(x)[1],
          'Date' = as.Date(NA),
          'character' = as.character(NA),
          'logical' = as.logical(NA),
